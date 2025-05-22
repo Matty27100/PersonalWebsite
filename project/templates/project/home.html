@@ -1,0 +1,289 @@
+{% load static %}
+{% load highlight_tags %}
+<!-- @ts-nocheck -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bejinaru Matei | Portfolio </title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Constellation background */
+    body {
+      background-color: #04040e;
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    .stars-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    
+    .star {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 4s infinite ease-in-out;
+    }
+    
+    /* Different star sizes */
+    .star-1 {
+      width: 1px;
+      height: 1px;
+    }
+    
+    .star-2 {
+      width: 2px;
+      height: 2px;
+    }
+    
+    .star-3 {
+      width: 3px;
+      height: 3px;
+      box-shadow: 0 0 4px 1px rgba(156, 184, 252, 0.7);
+    }
+    
+    /* Constellation lines */
+    .constellation {
+      position: absolute;
+      border-top: 1px solid rgba(156, 184, 252, 0.15);
+      transform-origin: 0 0;
+    }
+    
+    /* Animation for twinkling */
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+    
+    /* Subtle floating animation for the entire field */
+    .stars-container {
+      animation: float 25s infinite ease-in-out alternate;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-10px) translateX(10px); }
+      100% { transform: translateY(10px) translateX(-10px); }
+    }
+  </style>
+</head>
+<body>
+    <!-- Stars and constellation background -->
+    <div class="stars-container">
+      <!-- Stars -->
+      <div class="star star-3" style="top: 15%; left: 20%"></div>
+      <div class="star star-2" style="top: 25%; left: 15%"></div>
+      <div class="star star-3" style="top: 35%; left: 30%"></div>
+      <div class="star star-1" style="top: 10%; left: 40%"></div>
+      <div class="star star-2" style="top: 45%; left: 25%"></div>
+      <div class="star star-3" style="top: 55%; left: 45%"></div>
+      <div class="star star-2" style="top: 65%; left: 15%"></div>
+      <div class="star star-1" style="top: 75%; left: 35%"></div>
+      <div class="star star-3" style="top: 85%; left: 55%"></div>
+      <div class="star star-2" style="top: 5%; left: 65%"></div>
+      <div class="star star-3" style="top: 25%; left: 75%"></div>
+      <div class="star star-1" style="top: 45%; left: 70%"></div>
+      <div class="star star-2" style="top: 65%; left: 60%"></div>
+      <div class="star star-3" style="top: 85%; left: 85%"></div>
+      <div class="star star-1" style="top: 15%; left: 90%"></div>
+      <div class="star star-2" style="top: 35%; left: 80%"></div>
+      <div class="star star-3" style="top: 55%; left: 95%"></div>
+      <div class="star star-2" style="top: 75%; left: 80%"></div>
+      <div class="star star-1" style="top: 90%; left: 90%"></div>
+      
+      <!-- More stars scattered throughout -->
+      <div class="star star-1" style="top: 8%; left: 12%"></div>
+      <div class="star star-1" style="top: 18%; left: 42%"></div>
+      <div class="star star-1" style="top: 38%; left: 52%"></div>
+      <div class="star star-1" style="top: 58%; left: 32%"></div>
+      <div class="star star-1" style="top: 78%; left: 72%"></div>
+      <div class="star star-1" style="top: 88%; left: 22%"></div>
+      <div class="star star-1" style="top: 28%; left: 92%"></div>
+      <div class="star star-1" style="top: 48%; left: 82%"></div>
+      <div class="star star-1" style="top: 68%; left: 42%"></div>
+      <div class="star star-1" style="top: 98%; left: 62%"></div>
+      
+      <!-- Constellation lines -->
+      <div class="constellation" style="top: 15%; left: 20%; width: 150px; transform: rotate(25deg);"></div>
+      <div class="constellation" style="top: 35%; left: 30%; width: 120px; transform: rotate(-15deg);"></div>
+      <div class="constellation" style="top: 55%; left: 45%; width: 80px; transform: rotate(45deg);"></div>
+      <div class="constellation" style="top: 25%; left: 75%; width: 100px; transform: rotate(-35deg);"></div>
+      <div class="constellation" style="top: 65%; left: 60%; width: 130px; transform: rotate(10deg);"></div>
+    </div><div class="gradient-overlay"></div>
+    
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <a href="#" class="logo"> </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section" >
+    <div class="container" >
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Bejinaru Matei</span></h1>
+        <h2>Student at Politehnica University of Bucharest</h2>
+        <p>Passionate about Python & AI Integration, Cyber Security and Fullstack Development</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn primary-btn">View My Work</a>
+          <a href="#contact" class="btn secondary-btn">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a second-year student at the Faculty of Engineering in Foreign Languages, specializing in Computer and Information Technology (English stream). I have a special passion for AI integration, web development and Cyber security. I am a fast learner, always happy to venture into the unknown and work with new technologies, a skill that I've improved by participating to as many competitions and hackathons as I could. As a result, I enjoy creating innovative solutions that actually have an impact on the real-world. 
+          </p>
+          
+        </div>
+        <div class="skills">
+          <h3>My Skills</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">React</span>
+            <span class="tag">Git</span>
+            <span class="tag">Google Cloud</span>
+            <span class="tag">Linux</span>
+            <span class="tag">AI Integration</span>
+            <span class="tag">Rust</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Activities Section -->
+  <section id="activities" class="activities-section">
+    <div class="container">
+      <h2 class="section-title">Activities</h2>
+      <div class="activities-list">
+        {% for activity in activities %}
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="{{ activity.image.url }}" alt="{{ activity.title }}">
+          </div>
+          <div class="activity-info">
+            <h3>{{ activity.title }}</h3>
+            <p class="activity-date">{{ activity.date_range }}</p>
+            <p class="activity-description">
+              {{ activity.description|highlight_words:activity.highlight_words }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-list">
+        {% for project in projects %}
+        <div class="project-card horizontal">
+          <div class="project-info">
+            <h3>{{ project.title }}</h3>
+            <p class="project-description">{{ project.description|truncatechars:300 }}</p>
+            <p class="project-tech">{{ project.technology }}</p>
+            <div class="project-meta">
+              <span class="project-date">{{ project.uploaded_at|date:"F Y" }}</span>
+              <div class="project-links">
+                {% if project.github_url %}
+                <a href="{{ project.github_url }}" target="_blank" class="btn github-btn">
+                  <i class="fab fa-github"></i>
+                </a>
+                {% endif %}
+                {% if project.url %}
+                <a href="{{ project.url }}" target="_blank" class="btn demo-btn">
+                  <i class="fas fa-external-link-alt"></i>
+                  </a>
+                {% endif %}
+                </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>bejinaru.matei7@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+40 0728 424 122</span>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/Matty27100" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/matei-cristian-bejinaru-b1614824b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="http://instagram.com/matty_2710_" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bejinaru Matei-Cristian. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+ 
+
+</body>
+</html>
